@@ -1,14 +1,15 @@
 {
   "expo": {
-    "name": "Task1",
-    "slug": "Task1",
+    "name": "Flashcards",
+    "slug": "flashcards-quiz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+    "scheme": "flashcards-quiz",
+    "updates": { "fallbackToCacheTimeout": 0 },
+    "assetBundlePatterns": ["**/*"],
+    "ios": { "supportsTablet": true },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
@@ -18,8 +19,11 @@
       },
       "predictiveBackGestureEnabled": false
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "web": { "favicon": "./assets/favicon.png", "bundler": "metro" },
+    "plugins": [
+      "expo-router",
+      ["expo-splash-screen", { "backgroundColor": "#E8F0FE", "image": "./assets/splash-icon.png", "imageWidth": 200 }]
+    ],
+    "experiments": { "typedRoutes": true }
   }
 }
